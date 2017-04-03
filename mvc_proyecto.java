@@ -1,4 +1,4 @@
-package buscador;
+package mvc_proyecto;
 
 public class buscador{
   public static void main(String[] args) {
