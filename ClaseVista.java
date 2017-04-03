@@ -20,5 +20,13 @@ public class ClaseVista extends JFrame implements ActionListener {
       setLocationRelativeTo(null);
       setTitle("Menú");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      
+      botonBuscador.addActionListener(this);
+      add(botonBuscador);
+		  setVisible(true);
+  }
+  
+  public void actionPerformed(ActionEvent e){
+    
   }
 }
