@@ -1,1 +1,4 @@
+package buscador;
 
+public class ClaseVista extends JFrame implements ActionListener {
+}
