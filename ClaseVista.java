@@ -16,7 +16,7 @@ public class ClaseVista extends JFrame implements ActionListener {
   
   public ClaseVista() {
       setLayout(new FlowLayout());
-		  setSize(400, 130);
+      setSize(400, 130);
       setLocationRelativeTo(null);
       setTitle("Menú");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
