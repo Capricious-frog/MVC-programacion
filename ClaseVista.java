@@ -5,12 +5,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel; 
 import javax.swing.JTextField;
 import javax.swing.*;
+import java.awt.*;
+import javax.swing.*;
 import java.awt.Font;
 import java.awt.Container;
-//import java.awt.Image;
+import java.awt.Image;
 import javax.swing.JFrame;
 
-public class ClaseVista extends JFrame {
+public class ClaseVista extends javax.swing.JFrame {
 
 	private static final long serialVersionUID = 1L;
 
@@ -27,8 +29,12 @@ public class ClaseVista extends JFrame {
 		setSize(800,500);
 
 		botonNumero1 = new JButton("BUSCADOR");
+		botonNumero1.setPreferredSize(new Dimension(200, 100));
+		bloqueContenedor.add(botonNumero1);
 		botonNumero2 = new JButton("PROGRAMA 2");
+		botonNumero2.setPreferredSize(new Dimension(200, 100));
 		botonNumero3 = new JButton("PROGRAMA 3");
+		botonNumero3.setPreferredSize(new Dimension(200, 100));
 
 
 		bloqueContenedor.add(botonNumero1);
@@ -37,6 +43,7 @@ public class ClaseVista extends JFrame {
 
 		setVisible(true);
 		
-		((JPanel)getContentPane()).setOpaque(false); ImageIcon uno=new ImageIcon(this.getClass().getResource("/Imagenes/Desert.jpg")); JLabel fondo= new JLabel(); fondo.setIcon(uno); getLayeredPane().add(fondo,JLayeredPane.FRAME_CONTENT_LAYER); fondo.setBounds(0,0,uno.getIconWidth(),uno.getIconHeight());
 		
+		((JPanel)getContentPane()).setOpaque(false); ImageIcon uno=new ImageIcon(this.getClass().getResource("/Imagenes/fon.jpg")); JLabel fondo= new JLabel(); fondo.setIcon(uno); getLayeredPane().add(fondo,JLayeredPane.FRAME_CONTENT_LAYER); fondo.setBounds(0,0,uno.getIconWidth(),uno.getIconHeight());
+	}
 }
