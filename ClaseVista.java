@@ -1,11 +1,14 @@
-package mvc_proyecto;
-
 import java.awt.Container; 
 import java.awt.FlowLayout; 
 import javax.swing.JButton; 
 import javax.swing.JFrame; 
 import javax.swing.JLabel; 
 import javax.swing.JTextField;
+import javax.swing.*;
+import java.awt.Font;
+import java.awt.Container;
+//import java.awt.Image;
+import javax.swing.JFrame;
 
 public class ClaseVista extends JFrame {
 
@@ -33,5 +36,7 @@ public class ClaseVista extends JFrame {
 		bloqueContenedor.add(botonNumero3);
 
 		setVisible(true);
+		
+		((JPanel)getContentPane()).setOpaque(false); ImageIcon uno=new ImageIcon(this.getClass().getResource("/imagenes/fon.jpg")); JLabel fondo= new JLabel(); fondo.setIcon(uno); getLayeredPane().add(fondo,JLayeredPane.FRAME_CONTENT_LAYER); fondo.setBounds(0,0,uno.getIconWidth(),uno.getIconHeight());
 	}
 }
