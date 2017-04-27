@@ -12,11 +12,16 @@ import java.awt.Container;
 import java.awt.Image;
 import javax.swing.JFrame;
 
+
 public class ClaseVista extends javax.swing.JFrame {
 
 	private static final long serialVersionUID = 1L;
 
+	JPanel addPanel = new JPanel();
+	JButton addButton= new JButton("Add");
+	    
 	Container bloqueContenedor = null;  
+	Container bloqueContenedor2 = null;
 	JButton botonNumero1 = null;
 	JButton botonNumero2 = null;
 	JButton botonNumero3 = null;
@@ -26,24 +31,24 @@ public class ClaseVista extends javax.swing.JFrame {
 		bloqueContenedor = getContentPane(); 
 		setTitle("GRUPO 3"); 
 		setLayout(new FlowLayout()); 
-		setSize(800,500);
+		bloqueContenedor.setLayout(null);
+		setSize(900,600);
 
-		botonNumero1 = new JButton("BUSCADOR");
-		botonNumero1.setPreferredSize(new Dimension(200, 100));
-		bloqueContenedor.add(botonNumero1);
-		botonNumero2 = new JButton("PROGRAMA 2");
-		botonNumero2.setPreferredSize(new Dimension(200, 100));
-		botonNumero3 = new JButton("PROGRAMA 3");
-		botonNumero3.setPreferredSize(new Dimension(200, 100));
-
-
-		bloqueContenedor.add(botonNumero1);
-		bloqueContenedor.add(botonNumero2);
-		bloqueContenedor.add(botonNumero3);
+		botonNumero1 = new JButton("PROGRAMA 1");
+		botonNumero1.setBounds(350,220,200,80);
+		bloqueContenedor.add(botonNumero1);	
+		
+		botonNumero2 = new JButton("INFORMACION");
+		botonNumero2.setBounds(350,320,200,80);
+		bloqueContenedor.add(botonNumero2);	
+		
+		botonNumero3 = new JButton("SALIR");
+		botonNumero3.setBounds(350,420,200,80);
+		bloqueContenedor.add(botonNumero3);	
+		
 
 		setVisible(true);
 		
-		
-		((JPanel)getContentPane()).setOpaque(false); ImageIcon uno=new ImageIcon(this.getClass().getResource("/Imagenes/fon.jpg")); JLabel fondo= new JLabel(); fondo.setIcon(uno); getLayeredPane().add(fondo,JLayeredPane.FRAME_CONTENT_LAYER); fondo.setBounds(0,0,uno.getIconWidth(),uno.getIconHeight());
+		((JPanel)getContentPane()).setOpaque(false); ImageIcon uno=new ImageIcon(this.getClass().getResource("/Imagenes/fondo.jpg")); JLabel fondo= new JLabel(); fondo.setIcon(uno); getLayeredPane().add(fondo,JLayeredPane.FRAME_CONTENT_LAYER); fondo.setBounds(0,0,uno.getIconWidth(),uno.getIconHeight()); 
 	}
 }
