@@ -62,11 +62,19 @@ public class ClaseControlador implements ActionListener {
 		if(objEvento.getSource()==objVista3.botonConvertir){
 
 			Object moneda1 = this.objVista3.divisas.getSelectedItem();
-			String dinero = this.objVista3.cajaDeTextoNumero1.getText();
+			String dinero = this.objVista3.cajaDeTextoNumero1.getText();	
 			Object moneda2 = this.objVista3.divisas2.getSelectedItem();
-			
-			objModelo.conversor(moneda1, dinero, moneda2);
+		
+			try{	
+				objModelo.conversor(moneda1, dinero, moneda2);
+			}catch(NumberFormatException e){
+				JOptionPane.showMessageDialog(null, "No se pueden introducir letras.");
+				
+			}catch(NullPointerException e){
+				JOptionPane.showMessageDialog(null, "Tienes que elegir una moneda.");	
+			}
 		}	
+		
 		if(objEvento.getSource()==objVista4.botonSalir3){
 			objVista4.setVisible(false);
 			objVista.setVisible(true);
@@ -76,7 +84,13 @@ public class ClaseControlador implements ActionListener {
 			objVista2.setVisible(true);
 		}
 		if(objEvento.getSource()==objVista4.botonNumero7){
-			objModelo.preguntaHistoria();
+			objModelo.preguntasDeHistoria();
+		}
+		if(objEvento.getSource()==objVista4.botonNumero8){
+			objModelo.preguntasDeDeportes();
+		}
+		if(objEvento.getSource()==objVista4.botonNumero9){
+			objModelo.preguntasDeMusicas();
 		}
 	}
 

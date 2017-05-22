@@ -19,6 +19,7 @@ public class ClaseVista extends javax.swing.JFrame {
 	Container bloqueContenedor2 = null;
 	Container bloqueContenedor3 = null;  
 	Container bloqueContenedor4 = null;
+	Container bloqueContenedor5 = null;
 	JTextField cajaDeTextoNumero1 = null; 
 	JButton botonNumero1 = null;
 	JButton botonNumero2 = null;
@@ -185,7 +186,7 @@ public class ClaseVista extends javax.swing.JFrame {
 		botonNumero9.setBounds(650,350,200,50);
 		botonNumero9.setFont(new Font("Fipps", Font.ITALIC, 15));
 		bloqueContenedor4.add(botonNumero9);
-		
+
 		botonSalir3 = new JButton("");
 		botonSalir3.setBounds(795,470,70,70);
 		botonSalir3.setFont(new Font("Tahoma", Font.BOLD, 20));
@@ -198,11 +199,8 @@ public class ClaseVista extends javax.swing.JFrame {
 		bloqueContenedor4.add(botonAtras3);	
 		botonAtras3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png")));
 
-		((JPanel)getContentPane()).setOpaque(false); ImageIcon uno=new ImageIcon(this.getClass().getResource("/imagenes/fondo_deportes.jpg")); JLabel fondo= new JLabel(); fondo.setIcon(uno); getLayeredPane().add(fondo,JLayeredPane.FRAME_CONTENT_LAYER); fondo.setBounds(0,0,uno.getIconWidth(),uno.getIconHeight());
+		((JPanel)getContentPane()).setOpaque(false); ImageIcon uno=new ImageIcon(this.getClass().getResource("/imagenes/fondo_deportes.png")); JLabel fondo= new JLabel(); fondo.setIcon(uno); getLayeredPane().add(fondo,JLayeredPane.FRAME_CONTENT_LAYER); fondo.setBounds(0,0,uno.getIconWidth(),uno.getIconHeight());
 
 		setVisible(false);
-
 	}
-
 }
-
