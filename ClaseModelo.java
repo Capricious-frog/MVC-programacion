@@ -360,77 +360,85 @@ public class ClaseModelo  {
 			error1=error1+"¿Quién ganó el festival de Eurovisión 2017? - Portugal.";
 			errores++;
 		}
-		Object pregunta2 = JOptionPane.showInputDialog(null,"2- ¿Cómo se llama el cantante que interpreta la canción Do it for your lover?",
+		Object pregunta2 = JOptionPane.showInputDialog(null,"2- ¿Donde murió mozart?",
 				"preguntas", JOptionPane.QUESTION_MESSAGE, null,
-				new Object[] {" ","Manel Navarro.","Alejandro Sanz.", "Eneritz Ramírez.", "Jon Ander Moraleda." },"");
-		if (pregunta2=="Manel Navarro."){
+				new Object[] {" ","Roma, Italia.","Praga, Republica Checa.", "Sofia, Bulgaria.", "Viena, Austria." },"");
+		if (pregunta2=="Viena, Austria."){
 			aciertos++;
 		}else{
-			error1=error1+"\n";
+			error1=error1+"\n¿Donde murió mozart? - Viena, Austria.";
 			errores++;
 		}
-		Object pregunta3 = JOptionPane.showInputDialog(null,"3- ¿Cómo sigue está canción despacito quiero respirar tú fuego despacito...?",
+		Object pregunta3 = JOptionPane.showInputDialog(null,"3-¿Con qué material está construida una flauta travesera?",
 				"preguntas", JOptionPane.QUESTION_MESSAGE, null,
-				new Object[] { " ", "Deja que te diga cosas al oido.","Deja que al oido te diga cosas.", "Si no estás conmigo.", "Hasta el final." },"");
-		if (pregunta3=="Deja que te diga cosas al oido."){
+				new Object[] { " ", "Madera.","Acero.", "Metal.", "Cobre." },"");
+		if (pregunta3=="Metal."){
 			aciertos++;
 		}else{
+			error1=error1+"/n¿Con qué material está construida una flauta travesera? - Metal.";
 			errores++;
 		}
-		Object pregunta4 = JOptionPane.showInputDialog(null,"4- ¿En qué ciudad comienza la historia del jazz?",
+		Object pregunta4 = JOptionPane.showInputDialog(null,"4-¿En qué ciudad comienza la historia del jazz?",
 				"preguntas", JOptionPane.QUESTION_MESSAGE, null,
 				new Object[] {" ","Manhattan.","Nueva Orleáns.","Madrid.","Londres."},"");
 		if (pregunta4=="Nueva Orleáns."){
 			aciertos++;
 		}else{
+			error1=error1+"/n¿En qué ciudad comienza la historia del jazz? - Nueva Orleans.";
 			errores++;
 		}
-		Object pregunta5 = JOptionPane.showInputDialog(null,"5- ¿Qué cantante canta la canción de Darte un beso?",
+		Object pregunta5 = JOptionPane.showInputDialog(null,"5-¿El xilófono es un instrumento de...?",
 				"preguntas", JOptionPane.QUESTION_MESSAGE, null,
-				new Object[] {" ", "Romeo Santos.","Daddy Yankee.", "Enrique Inglesias.","Prince Royce." },"");
-		if (pregunta5=="Prince Royce."){
+				new Object[] {" ", "Viento metal.","Percusion.", "Viento madera.","Cualquiera de las tres." },"");
+		if (pregunta5=="Percusion."){
 			aciertos++;
 		}else{
+			error1=error1+"/n¿El xilófono es un instrumento de...? - Percusion.";
 			errores++;
 		}
-		Object pregunta6 = JOptionPane.showInputDialog(null,"6- ¿Quién de estos cantantes ha tenido cancer?",
+		Object pregunta6 = JOptionPane.showInputDialog(null,"6-¿Cuantas cuerdas tiene un violin?",
 				"preguntas", JOptionPane.QUESTION_MESSAGE, null,
-				new Object[] {" ", "Lady Gaga.","Britney Spears.", "Whitney houston.", "Todos." },"");
-		if (pregunta6=="Britney Spears."){
+				new Object[] {" ", "3.","5.", "4.", "6." },"");
+		if (pregunta6=="4."){
 			aciertos++;
 		}else{
+			error1=error1+"\n¿Cuantas cuerdas tiene un violin? - 4";
 			errores++;
 		}
-		Object pregunta7 = JOptionPane.showInputDialog(null,"7- ¿Cuál de estos cantantes es Gay?",
+		Object pregunta7 = JOptionPane.showInputDialog(null,"7-¿En que año se fundó el grupo de los Beatles?",
 				"preguntas", JOptionPane.QUESTION_MESSAGE, null,
-				new Object[] {" ", "Alejandro Sanz.","Ricky Martin.", "Melendi.","Carlos Baute." },"");
-		if (pregunta7=="Ricky Martin."){
+				new Object[] {" ", "1960.","1958.", "1968.","1971." },"");
+		if (pregunta7=="1958."){
 			aciertos++;
 		}else{
+			error1=error1+"\n¿En que año se fundó el grupo de los Beatles? - 1958.";
 			errores++;
 		}
-		Object pregunta8 = JOptionPane.showInputDialog(null,"8- ¿Cómo quedó Manel Navarro en Eurovisión?",
+		Object pregunta8 = JOptionPane.showInputDialog(null,"8-¿Cual de estas canciones no es de Queen?",
 				"preguntas", JOptionPane.QUESTION_MESSAGE, null,
-				new Object[] {" ", "18.","25.", "23.", "26." },"");
-		if (pregunta8=="26."){
+				new Object[] {" ", "Bohemian Rhapsody.","Start me up.", "We Will Rock You.", "I want it all." },"");
+		if (pregunta8=="Start me up."){
 			aciertos++;
 		}else{
+			error1=error1+"\n¿Cual de estas canciones no es de Queen? - Start me up.";
 			errores++;
 		}
-		Object pregunta9 = JOptionPane.showInputDialog(null,"9- ¿Cuántas son en el grupo de Fifth Harmony?",
+		Object pregunta9 = JOptionPane.showInputDialog(null,"9-¿Quien es el cantante de los Rolling Stones?",
 				"preguntas", JOptionPane.QUESTION_MESSAGE, null,
-				new Object[] {" ", "5.","3.", "6.", "4" },"");
-		if (pregunta9=="4."){
+				new Object[] {" ", "Mick Jagger.","Keith Richards.", "Mick Avony.", "Ronnie Wood." },"");
+		if (pregunta9=="Mick Jagger."){
 			aciertos++;
 		}else{
+			error1=error1+"\n¿Quien es el cantante de los Rolling Stones? - Mick Jagger.";
 			errores++;
 		}
-		Object pregunta10 = JOptionPane.showInputDialog(null,"10- ¿Qué tipo de música es la canción de Propuesta Indecente ?",
+		Object pregunta10 = JOptionPane.showInputDialog(null,"10-¿En que año murió Brian Johnson (AC/DC)?",
 				"preguntas", JOptionPane.QUESTION_MESSAGE, null,
-				new Object[] {" ", "Reggaeton.","Pop.", "House.", "Bachata." },"");
-		if (pregunta10=="Bachata."){
+				new Object[] {" ", "2014.","2009.","2017.","No está muerto." },"");
+		if (pregunta10=="No está muerto."){
 			aciertos++;
 		}else{
+			error1=error1+"\n¿En que año murió Brian Johnson (AC/DC)? - No está muerto.";
 			errores++;
 		}
 		JOptionPane.showMessageDialog(null, "Preguntas acertadas: "+aciertos+", Preguntas falladas: "+errores+"\n"+error1);
