@@ -12,61 +12,77 @@ public class ClaseVista extends javax.swing.JFrame {
 	JPanel addPanel = new JPanel();
 	JButton addButton = new JButton("Add");
 
-	//Bloque contenedor de la ventana principal
+	/*Todos estan en el mismo orden que abajo
+	 * 
+	 * bloqueContenedor  Bloque contenedor de la ventana principal
+	 * bloqueContenedor2 --> Bloque contenedor de la ventana del primer programa (conversor de dinero)
+	 * bloqueContenedor3 --> Bloque contenedor de la ventana de programas (menu de programas)
+	 * bloqueContenedor4 --> Bloque contenedor los quizz (menu para seleccionar entre los tres quizz)
+	 * bloqueContenedor5 --> Bloque contenedor sin utilizar (juego solucionar ecuaciones)
+	 * 
+	 * cajaDeTextoNumero1 --> Caja de texto conversor
+	 * cajaDeTextoNumero2 --> Caja de texto numero para el juego solucionar ecuaciones
+	 * cajaDeTextoNumero3 --> Caja de texto numero resultado juego solucionar ecuaciones
+	 * 
+	 * botonNumero1 --> Boton "programas" ventana principal
+	 * botonNumero2 --> Boton "informacion" ventana principal
+	 * botonNumero3 --> Boton "Salir" ventana principal
+	 * botonNumero4 --> Boton "Programa 1" lista programas
+	 * botonNumero5 --> Boton "Programa 2" lista programas
+	 * botonNumero6 --> Boton "Programa 3" lista programas
+	 * botonNumero7 --> Boton "Historia" programa quiz
+	 * botonNumero8 --> Boton "Deportes" programa quiz
+	 * botonNumero9 --> Boton "Musica" programa quiz
+	 * botonNumero10 --> Boton enviar programa juego solucionar ecuaciones
+	 * botonNumero11 --> Boton emprezar juego ecuaciones
+	 * 
+	 * botonSalir1 --> Boton casa segunda lista programas
+	 * botonSalir2 --> Boton casa programa conversor
+	 * botonSalir3 --> Boton casa programa quiz
+	 * botonSalir4 --> Boton programa juego memoria
+	 * 
+	 * botonAtras1 --> Boton flecha atras conversor
+	 * botonAtras2 --> Boton flecha atras quiz
+	 * botonAtras3 --> Boton flecha atras juego solucionar ecuaciones
+	 * 
+	 * botonConvertir --> Boton "Convertir" en el conversor
+	 */
+	
+	
+	
 	Container bloqueContenedor = null;
-	//Bloque contenedor de la ventana del primer programa (conversor de dinero)
 	Container bloqueContenedor2 = null;
-	//Bloque contenedor de la ventana de programas (menu de programas)
 	Container bloqueContenedor3 = null;
-	//Bloque contenedor los quizz (menu para seleccionar entre los tres quizz)
 	Container bloqueContenedor4 = null;
-	//Bloque contenedor sin utilizar (juego de memoria)
 	Container bloqueContenedor5 = null;
-	//Caja de texto conversor
+	
 	JTextField cajaDeTextoNumero1 = null;
-	//Caja de texto numero para memorizar juego memoria
 	public static JTextField cajaDeTextoNumero2 = null;
-	//Caja de texto numero resultado juego memoria
 	JTextField cajaDeTextoNumero3 = null;
-	//Boton "programas" ventana principal
+	
 	JButton botonNumero1 = null;
-	//Boton "informacion" ventana principal
 	JButton botonNumero2 = null;
-	//Boton "Salir" ventana principal
 	JButton botonNumero3 = null;
-	//Boton "Programa 1" lista programas
 	JButton botonNumero4 = null;
-	//Boton "Programa 2" lista programas
 	JButton botonNumero5 = null;
-	//Boton "Programa 3" lista programas
 	JButton botonNumero6 = null;
-	//Boton "Historia" programa quiz
 	JButton botonNumero7 = null;
-	//Boton "Deportes" programa quiz
 	JButton botonNumero8 = null;
-	//Boton "Musica" programa quiz
 	JButton botonNumero9 = null;
-	//Boton enviar programa juego memoria
 	JButton botonNumero10 = null;
-	//Boton emprezar juego memoria
 	JButton botonNumero11 = null;
-	//Boton casa segunda lista programas
+	
 	JButton botonSalir1 = null;
-	//Boton casa programa conversor
 	JButton botonSalir2 = null;
-	//Boton casa programa quiz
 	JButton botonSalir3 = null;
-	//Boton programa juego memoria
 	JButton botonSalir4 = null;
-	//Boton flecha atras conversor
+	
 	JButton botonAtras1 = null;
-	//Boton flecha atras quiz
 	JButton botonAtras2 = null;
-	//Boton flecha atras juego memoria
 	JButton botonAtras3 = null;
-	//Boton "Convertir" en el conversor
 	JButton botonConvertir = null;
 
+	//Array con las diferentes opciones de conversion
 	String[] arrayDivisas = {
 			"Euro - €",
 			"Dolar - $",
@@ -277,7 +293,7 @@ public class ClaseVista extends javax.swing.JFrame {
 		setSize(910, 600);
 		setLocationRelativeTo(null);
 
-		//Area de texto con los numeros a memorizar
+		//Area de texto con la ecuacion a resolver
 		cajaDeTextoNumero2 = new JTextField("", 10);
 		cajaDeTextoNumero2.setBounds(340, 100, 230, 60);
 		cajaDeTextoNumero2.setFont(new Font("Tahoma", Font.BOLD, 25));
