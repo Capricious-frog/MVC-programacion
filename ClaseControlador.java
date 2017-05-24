@@ -4,8 +4,9 @@ package proyecto;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import java.applet.AudioClip;
 
-
+//Al pulsar un boton todas las ventanas se vuelven invisible y la que quieres acceder se hace visible
 public class ClaseControlador implements ActionListener {
 
 	ClaseModelo objModelo = null;
@@ -13,19 +14,22 @@ public class ClaseControlador implements ActionListener {
 	ClaseVista objVista2 = null;
 	ClaseVista objVista3 = null;
 	ClaseVista objVista4 = null;
+	ClaseVista objVista5 = null;
+	
+	AudioClip sonido;
 
-	public ClaseControlador(ClaseVista objVista, ClaseModelo objModelo, ClaseVista objVista2, ClaseVista objVista3, ClaseVista objVista4) {
+	public ClaseControlador(ClaseVista objVista, ClaseModelo objModelo, ClaseVista objVista2, ClaseVista objVista3, ClaseVista objVista4, ClaseVista objVista5) {
 		this.objModelo = objModelo;
 		this.objVista = objVista;
 		this.objVista2 = objVista2;
 		this.objVista3 = objVista3;
 		this.objVista4 = objVista4;
+		this.objVista5 = objVista5;
 		actionListener(this);
 	}
 
-	
+	//Son las instrucciones de los botones
 	public void actionPerformed(ActionEvent objEvento) {
-
 
 		if (objEvento.getSource() == objVista.botonNumero1) {
 			objVista.setVisible(false);
@@ -33,7 +37,7 @@ public class ClaseControlador implements ActionListener {
 		} else if (objEvento.getSource() == objVista.botonNumero3) {
 			System.exit(0);
 		} else if (objEvento.getSource() == objVista.botonNumero2) {
-			JOptionPane.showMessageDialog(null, "Este es un programa hecho por los integrantes del GRUPO3Â© de 1DM3.\n Todo uso,copia o venta de de este programa sin licencia sera ilegal\n y podra ser llevado y juzgado ante LA LEY.");
+			JOptionPane.showMessageDialog(null, "Este es un programa echo por los integrantes del grupo 3 de 1dm3.");
 		} else if (objEvento.getSource() == objVista2.botonNumero4) {
 			objVista2.setVisible(false);
 			objVista3.setVisible(true);
@@ -63,19 +67,28 @@ public class ClaseControlador implements ActionListener {
 			} catch (NullPointerException e) {
 				JOptionPane.showMessageDialog(null, "Tienes que elegir una moneda.");
 			}
+			try{
+				sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Musica/sound.wav"));
+				sonido.play();
+			}catch(NullPointerException noencuentra){
+				System.out.println("No se encontró el archivo de sonido");
+			}
 		} else if (objEvento.getSource() == objVista4.botonSalir3) {
 			objVista4.setVisible(false);
 			objVista.setVisible(true);
 		} else if (objEvento.getSource() == objVista4.botonAtras3) {
 			objVista4.setVisible(false);
 			objVista2.setVisible(true);
+		} else if (objEvento.getSource() == objVista2.botonNumero6) {
+			objVista2.setVisible(false);
+			objVista5.setVisible(true);
 		} else if (objEvento.getSource() == objVista4.botonNumero7) {
 			objModelo.preguntasDeHistoria();
 		} else if (objEvento.getSource() == objVista4.botonNumero8) {
 			objModelo.preguntasDeDeportes();
 		} else if (objEvento.getSource() == objVista4.botonNumero9) {
 			objModelo.preguntasDeMusicas();
-		}
+		} 
 	}
 
 	public void actionListener(ActionListener escuchador) {

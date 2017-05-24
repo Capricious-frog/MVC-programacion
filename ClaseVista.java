@@ -11,28 +11,52 @@ public class ClaseVista extends javax.swing.JFrame {
 
 	JPanel addPanel = new JPanel();
 	JButton addButton = new JButton("Add");
-
+	
+	//Bloque contenedor de la ventana principal
 	Container bloqueContenedor = null;
+	//Bloque contenedor de la ventana del primer programa (conversor de dinero)
 	Container bloqueContenedor2 = null;
+	//Bloque contenedor de la ventana de programas (menu de programas)
 	Container bloqueContenedor3 = null;
+	//Bloque contenedor los quizz (menu para seleccionar entre los tres quizz)
 	Container bloqueContenedor4 = null;
+	//Bloque contenedor sin utilizar (juego de memoria)
 	Container bloqueContenedor5 = null;
+	//Caja de texto conversor
 	JTextField cajaDeTextoNumero1 = null;
+	//Caja de texto juego memoria
+	JTextField cajaDeTextoNumero2 = null;
+	//Boton "programas" ventana principal
 	JButton botonNumero1 = null;
+	//Boton "informacion" ventana principal
 	JButton botonNumero2 = null;
+	//Boton "Salir" ventana principal
 	JButton botonNumero3 = null;
+	//Boton "Programa 1" lista programas
 	JButton botonNumero4 = null;
+	//Boton "Programa 2" lista programas
 	JButton botonNumero5 = null;
+	//Boton "Programa 3" lista programas
 	JButton botonNumero6 = null;
+	//Boton "Historia" programa quiz
 	JButton botonNumero7 = null;
+	//Boton "Deportes" programa quiz
 	JButton botonNumero8 = null;
+	//Boton "Musica" programa quiz
 	JButton botonNumero9 = null;
+	//Boton casa segunda lista programas
 	JButton botonSalir1 = null;
+	//Boton casa programa conversor
 	JButton botonSalir2 = null;
+	//Boton casa programa quiz
 	JButton botonSalir3 = null;
+	//Boton flecha atras conversor
 	JButton botonAtras1 = null;
+	//Boton flecha atras quiz
 	JButton botonAtras2 = null;
+	//Boton flecha atras juego memoria
 	JButton botonAtras3 = null;
+	//Boton "Convertir" en el conversor
 	JButton botonConvertir = null;
 	String[] arrayDivisas = {
 			"Euro - €",
@@ -70,6 +94,7 @@ public class ClaseVista extends javax.swing.JFrame {
 		botonNumero3.setFont(new Font("Fipps", Font.ITALIC, 15));
 		bloqueContenedor.add(botonNumero3);
 
+		//Comando para poner una imagen de fondo
 		((JPanel) getContentPane()).setOpaque(false);
 		ImageIcon uno = new ImageIcon(this.getClass().getResource("/imagenes/fondo.gif"));
 		JLabel fondo = new JLabel();
@@ -127,6 +152,7 @@ public class ClaseVista extends javax.swing.JFrame {
 		bloqueContenedor3.add(botonAtras2);
 		botonAtras2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png")));
 
+		//Comando para poner una imagen de fondo
 		((JPanel) getContentPane()).setOpaque(false);
 		ImageIcon uno = new ImageIcon(this.getClass().getResource("/imagenes/fondo_dinero.jpg"));
 		JLabel fondo = new JLabel();
@@ -170,7 +196,7 @@ public class ClaseVista extends javax.swing.JFrame {
 		bloqueContenedor2.add(botonSalir1);
 		botonSalir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/casa.png")));
 
-
+		//Comando para poner una imagen de fondo
 		((JPanel) getContentPane()).setOpaque(false);
 		ImageIcon uno = new ImageIcon(this.getClass().getResource("/imagenes/fondo2.png"));
 		JLabel fondo = new JLabel();
@@ -220,6 +246,7 @@ public class ClaseVista extends javax.swing.JFrame {
 		bloqueContenedor4.add(botonAtras3);
 		botonAtras3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png")));
 
+		//Comando para poner una imagen de fondo
 		((JPanel) getContentPane()).setOpaque(false);
 		ImageIcon uno = new ImageIcon(this.getClass().getResource("/imagenes/fondo_deportes.png"));
 		JLabel fondo = new JLabel();
@@ -227,6 +254,32 @@ public class ClaseVista extends javax.swing.JFrame {
 		getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
 		fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
 
+		setVisible(false);
+	}
+	
+	public ClaseVista(float f) {
+		
+		bloqueContenedor5 = getContentPane();
+		setTitle("Juego de memoria");
+		setLayout(new FlowLayout());
+		bloqueContenedor5.setLayout(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(910, 600);
+		setLocationRelativeTo(null);
+		
+		cajaDeTextoNumero2 = new JTextField("", 10);
+		cajaDeTextoNumero2.setBounds(350, 160, 200, 80);
+		cajaDeTextoNumero2.setFont(new Font("Tahoma", Font.BOLD, 25));
+		cajaDeTextoNumero2.setHorizontalAlignment(JTextField.CENTER);
+		bloqueContenedor5.add(cajaDeTextoNumero2);
+		
+		((JPanel) getContentPane()).setOpaque(false);
+		ImageIcon uno = new ImageIcon(this.getClass().getResource("/imagenes/fondo_deportes.png"));
+		JLabel fondo = new JLabel();
+		fondo.setIcon(uno);
+		getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
+		fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
+		
 		setVisible(false);
 	}
 }
