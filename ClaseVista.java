@@ -4,6 +4,7 @@ import java.awt.Container;
 import java.awt.FlowLayout;
 import javax.swing.*;
 import java.awt.Font;
+import java.util.concurrent.TimeUnit;
 
 public class ClaseVista extends javax.swing.JFrame {
 
@@ -11,7 +12,7 @@ public class ClaseVista extends javax.swing.JFrame {
 
 	JPanel addPanel = new JPanel();
 	JButton addButton = new JButton("Add");
-	
+
 	//Bloque contenedor de la ventana principal
 	Container bloqueContenedor = null;
 	//Bloque contenedor de la ventana del primer programa (conversor de dinero)
@@ -24,8 +25,10 @@ public class ClaseVista extends javax.swing.JFrame {
 	Container bloqueContenedor5 = null;
 	//Caja de texto conversor
 	JTextField cajaDeTextoNumero1 = null;
-	//Caja de texto juego memoria
-	JTextField cajaDeTextoNumero2 = null;
+	//Caja de texto numero para memorizar juego memoria
+	public static JTextField cajaDeTextoNumero2 = null;
+	//Caja de texto numero resultado juego memoria
+	JTextField cajaDeTextoNumero3 = null;
 	//Boton "programas" ventana principal
 	JButton botonNumero1 = null;
 	//Boton "informacion" ventana principal
@@ -44,20 +47,27 @@ public class ClaseVista extends javax.swing.JFrame {
 	JButton botonNumero8 = null;
 	//Boton "Musica" programa quiz
 	JButton botonNumero9 = null;
+	//Boton enviar programa juego memoria
+	JButton botonNumero10 = null;
+	//Boton emprezar juego memoria
+	JButton botonNumero11 = null;
 	//Boton casa segunda lista programas
 	JButton botonSalir1 = null;
 	//Boton casa programa conversor
 	JButton botonSalir2 = null;
 	//Boton casa programa quiz
 	JButton botonSalir3 = null;
+	//Boton programa juego memoria
+	JButton botonSalir4 = null;
 	//Boton flecha atras conversor
-	JButton botonAtras1 = null;
-	//Boton flecha atras quiz
 	JButton botonAtras2 = null;
-	//Boton flecha atras juego memoria
+	//Boton flecha atras quiz
 	JButton botonAtras3 = null;
+	//Boton flecha atras juego memoria
+	JButton botonAtras4 = null;
 	//Boton "Convertir" en el conversor
 	JButton botonConvertir = null;
+
 	String[] arrayDivisas = {
 			"Euro - €",
 			"Dolar - $",
@@ -65,6 +75,7 @@ public class ClaseVista extends javax.swing.JFrame {
 			"Libras - £",
 			"Pesos - $"
 	};
+
 	JComboBox<Object> divisas = null, divisas2 = null;
 	JFrame frame = null;
 
@@ -105,7 +116,7 @@ public class ClaseVista extends javax.swing.JFrame {
 		setVisible(true);
 
 	}
-	
+
 	//Ventana del programa conversor
 	public ClaseVista(boolean z) {
 
@@ -163,7 +174,7 @@ public class ClaseVista extends javax.swing.JFrame {
 
 		setVisible(false);
 	}
-	
+
 	//Ventana con la lista de programas
 	public ClaseVista(int i) {
 
@@ -256,9 +267,9 @@ public class ClaseVista extends javax.swing.JFrame {
 
 		setVisible(false);
 	}
-	
+
 	public ClaseVista(float f) {
-		
+
 		bloqueContenedor5 = getContentPane();
 		setTitle("Juego de memoria");
 		setLayout(new FlowLayout());
@@ -266,20 +277,57 @@ public class ClaseVista extends javax.swing.JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(910, 600);
 		setLocationRelativeTo(null);
-		
+
+		//Area de texto con los numeros a memorizar
 		cajaDeTextoNumero2 = new JTextField("", 10);
-		cajaDeTextoNumero2.setBounds(350, 160, 200, 80);
+		cajaDeTextoNumero2.setBounds(340, 100, 230, 60);
 		cajaDeTextoNumero2.setFont(new Font("Tahoma", Font.BOLD, 25));
 		cajaDeTextoNumero2.setHorizontalAlignment(JTextField.CENTER);
+		cajaDeTextoNumero2.setEditable(false);
 		bloqueContenedor5.add(cajaDeTextoNumero2);
+
+		//Area de texto para introducir el numero
+		cajaDeTextoNumero3 = new JTextField("", 10);
+		cajaDeTextoNumero3.setBounds(350, 300, 200, 50);
+		cajaDeTextoNumero3.setFont(new Font("Tahoma", Font.BOLD, 25));
+		cajaDeTextoNumero3.setHorizontalAlignment(JTextField.CENTER);
+		bloqueContenedor5.add(cajaDeTextoNumero3);
+
+
+		//Boton de emprezar
+		botonNumero10 = new JButton("COMPROBAR");
+		botonNumero10.setBounds(350, 400, 200, 50);
+		botonNumero10.setFont(new Font("Fipps", Font.ITALIC, 15));
+		bloqueContenedor5.add(botonNumero10);
+
 		
+
+		//Boton inicio con icono de casa
+		botonSalir4 = new JButton("");
+		botonSalir4.setBounds(795, 470, 70, 70);
+		botonSalir4.setFont(new Font("Tahoma", Font.BOLD, 20));
+		bloqueContenedor5.add(botonSalir4);
+		botonSalir4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/casa.png")));
+
+		//Boton flecha ventana anterior
+		botonAtras4 = new JButton("");
+		botonAtras4.setBounds(25, 470, 70, 70);
+		botonAtras4.setFont(new Font("Tahoma", Font.BOLD, 20));
+		bloqueContenedor5.add(botonAtras4);
+		botonAtras4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png")));
+
+
+		//Comando para poner una imagen de fondo
 		((JPanel) getContentPane()).setOpaque(false);
-		ImageIcon uno = new ImageIcon(this.getClass().getResource("/imagenes/fondo_deportes.png"));
+		ImageIcon uno = new ImageIcon(this.getClass().getResource("/Imagenes/memoria.jpg"));
 		JLabel fondo = new JLabel();
 		fondo.setIcon(uno);
 		getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
 		fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
-		
 		setVisible(false);
+	}
+
+	public static void ponerTexto(String numer){
+		cajaDeTextoNumero2.setText(numer);
 	}
 }

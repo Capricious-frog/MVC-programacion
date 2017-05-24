@@ -7,6 +7,7 @@ import javax.swing.plaf.*;
 
 public class ClaseModelo {
 
+
 	//Programa conversor de dinero
 	public void conversor(Object n1, String n2, Object n3) {
 
@@ -618,5 +619,5 @@ public class ClaseModelo {
 		}
 		JOptionPane.showMessageDialog(null, "Preguntas acertadas: " + aciertos + ", Preguntas falladas: " + errores + "\n" + error1);
 
-	}
+	}	
 }
