@@ -1,12 +1,11 @@
-package proyecto;
-
-
 import javax.swing.*;
 import java.awt.Font;
 import javax.swing.plaf.*;
+import java.applet.AudioClip;
 
 public class ClaseModelo {
 
+	AudioClip sonido;
 
 	//Programa conversor de dinero
 	public void conversor(Object n1, String n2, Object n3) {
@@ -95,9 +94,20 @@ public class ClaseModelo {
 			UIManager.put("OptionPane.messageFont", new FontUIResource(new Font("Tahoma", Font.BOLD, 20)));
 			JOptionPane.showMessageDialog(null, String.format("%.2f", numero1) + "$ (Pesos) son " + String.format("%.2f", total) + "¥");
 		} else if (n1 == "Euro - €" && n3 == "Euro - €") {
-			total = numero1 * 24.658;
 			UIManager.put("OptionPane.messageFont", new FontUIResource(new Font("Tahoma", Font.BOLD, 20)));
 			JOptionPane.showMessageDialog(null, "Eres tonto o que");
+		} else if (n1 == "Dolar - $" && n3 == "Dolar - $") {
+			UIManager.put("OptionPane.messageFont", new FontUIResource(new Font("Tahoma", Font.BOLD, 20)));
+			JOptionPane.showMessageDialog(null, "No se puede convertir al mismo tipo de divisa.");
+		} else if (n1 == "Yen - ¥" && n3 == "Yen - ¥") {
+			UIManager.put("OptionPane.messageFont", new FontUIResource(new Font("Tahoma", Font.BOLD, 20)));
+			JOptionPane.showMessageDialog(null, "No se puede convertir al mismo tipo de divisa.");
+		} else if (n1 == "Libras - £" && n3 == "Libras - £") {
+			UIManager.put("OptionPane.messageFont", new FontUIResource(new Font("Tahoma", Font.BOLD, 20)));
+			JOptionPane.showMessageDialog(null, "No se puede convertir al mismo tipo de divisa.");
+		} else if (n1 == "Pesos - $" && n3 == "Pesos - $") {
+			UIManager.put("OptionPane.messageFont", new FontUIResource(new Font("Tahoma", Font.BOLD, 20)));
+			JOptionPane.showMessageDialog(null, "No se puede convertir al mismo tipo de divisa.");
 		}
 	}
 
@@ -275,6 +285,14 @@ public class ClaseModelo {
 		} else {
 			error1 = error1 + "\n¿En que isla murió Napoleón? - Santa Elena.";
 			errores++;
+		}
+		
+		if(errores==10){
+			sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Musica/sound2.wav"));
+			sonido.play();
+		}else if(aciertos==10){
+			sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Musica/sound3.wav"));
+			sonido.play();
 		}
 
 		/*Resultado del quizz
@@ -457,7 +475,14 @@ public class ClaseModelo {
 			error1 = error1 + "\n¿Cuántos cuadros tiene un tablero de ajedrez? - 64.";
 			errores++;
 		}
-
+		
+		if(errores==10){
+			sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Musica/sound2.wav"));
+			sonido.play();
+		}else if(aciertos==10){
+			sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Musica/sound3.wav"));
+			sonido.play();
+		}
 		JOptionPane.showMessageDialog(null, "Preguntas acertadas: " + aciertos + ", Preguntas falladas: " + errores + "\n" + error1);
 
 	}
@@ -479,7 +504,7 @@ public class ClaseModelo {
 		if (pregunta1 == "Portugal.") {
 			aciertos++;
 		} else {
-			error1 = error1 + "¿Quién ganó el festival de Eurovisión 2017? - Portugal.";
+			error1 = error1 + "\n¿Quién ganó el festival de Eurovisión 2017? - Portugal.";
 			errores++;
 		}
 		Object pregunta2 = JOptionPane.showInputDialog(null, "2- ¿Donde murió mozart?",
@@ -509,7 +534,7 @@ public class ClaseModelo {
 		if (pregunta3 == "Metal.") {
 			aciertos++;
 		} else {
-			error1 = error1 + "/n¿Con qué material está construida una flauta travesera? - Metal.";
+			error1 = error1 + "\n¿Con qué material está construida una flauta travesera? - Metal.";
 			errores++;
 		}
 		Object pregunta4 = JOptionPane.showInputDialog(null, "4-¿En qué ciudad comienza la historia del jazz?",
@@ -524,7 +549,7 @@ public class ClaseModelo {
 		if (pregunta4 == "Nueva Orleáns.") {
 			aciertos++;
 		} else {
-			error1 = error1 + "/n¿En qué ciudad comienza la historia del jazz? - Nueva Orleans.";
+			error1 = error1 + "\n¿En qué ciudad comienza la historia del jazz? - Nueva Orleans.";
 			errores++;
 		}
 		Object pregunta5 = JOptionPane.showInputDialog(null, "5-¿El xilófono es un instrumento de...?",
@@ -539,7 +564,7 @@ public class ClaseModelo {
 		if (pregunta5 == "Percusion.") {
 			aciertos++;
 		} else {
-			error1 = error1 + "/n¿El xilófono es un instrumento de...? - Percusion.";
+			error1 = error1 + "\n¿El xilófono es un instrumento de...? - Percusion.";
 			errores++;
 		}
 		Object pregunta6 = JOptionPane.showInputDialog(null, "6-¿Cuantas cuerdas tiene un violin?",
@@ -616,6 +641,13 @@ public class ClaseModelo {
 		} else {
 			error1 = error1 + "\n¿En que año murió Brian Johnson (AC/DC)? - No está muerto.";
 			errores++;
+		}
+		if(errores==10){
+			sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Musica/sound2.wav"));
+			sonido.play();
+		}else if(aciertos==10){
+			sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Musica/sound3.wav"));
+			sonido.play();
 		}
 		JOptionPane.showMessageDialog(null, "Preguntas acertadas: " + aciertos + ", Preguntas falladas: " + errores + "\n" + error1);
 

@@ -1,6 +1,3 @@
-package proyecto;
-
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -40,7 +37,7 @@ public class ClaseControlador extends Thread implements ActionListener {
 			objVista.setVisible(false);
 			objVista2.setVisible(true);
 		} else if (objEvento.getSource() == objVista.botonNumero2) {
-			JOptionPane.showMessageDialog(null, "Este es un programa echo por los integrantes del grupo 3 de 1dm3.");
+			JOptionPane.showMessageDialog(null, "Este es un programa hecho por los integrantes del GRUPO3© de 1DM3.\n Todo uso,copia o venta de de este programa sin licencia sera ilegal\n y podra ser llevado y juzgado ante LA LEY.");
 		} else if (objEvento.getSource() == objVista.botonNumero3) {
 			System.exit(0);
 		} else if (objEvento.getSource() == objVista2.botonNumero4) {

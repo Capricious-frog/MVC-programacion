@@ -1,5 +1,3 @@
-package proyecto;
-
 import java.awt.Container;
 import java.awt.FlowLayout;
 import javax.swing.*;
@@ -107,17 +105,17 @@ public class ClaseVista extends javax.swing.JFrame {
 
 		botonNumero1 = new JButton("PROGRAMAS");
 		botonNumero1.setBounds(350, 270, 200, 50);
-		botonNumero1.setFont(new Font("Fipps", Font.ITALIC, 15));
+		botonNumero1.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor.add(botonNumero1);
 
 		botonNumero2 = new JButton("INFORMACION");
 		botonNumero2.setBounds(350, 350, 200, 50);
-		botonNumero2.setFont(new Font("Fipps", Font.ITALIC, 15));
+		botonNumero2.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor.add(botonNumero2);
 
 		botonNumero3 = new JButton("SALIR");
 		botonNumero3.setBounds(350, 430, 200, 50);
-		botonNumero3.setFont(new Font("Fipps", Font.ITALIC, 15));
+		botonNumero3.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor.add(botonNumero3);
 
 		//Comando para poner una imagen de fondo
@@ -145,36 +143,36 @@ public class ClaseVista extends javax.swing.JFrame {
 
 		divisas = new JComboBox<Object>(arrayDivisas);
 		divisas.setBounds(100, 170, 120, 50);
-		divisas.setFont(new Font("Tahoma", Font.BOLD, 20));
+		divisas.setFont(new Font("Agency FB", Font.BOLD, 25));
 		divisas.setSelectedIndex(-1);
 		bloqueContenedor3.add(divisas);
 
 		cajaDeTextoNumero1 = new JTextField("", 10);
 		cajaDeTextoNumero1.setBounds(350, 160, 200, 80);
-		cajaDeTextoNumero1.setFont(new Font("Tahoma", Font.BOLD, 25));
+		cajaDeTextoNumero1.setFont(new Font("Agency FB", Font.BOLD, 25));
 		cajaDeTextoNumero1.setHorizontalAlignment(JTextField.CENTER);
 		bloqueContenedor3.add(cajaDeTextoNumero1);
 
 		divisas2 = new JComboBox<Object>(arrayDivisas);
 		divisas2.setBounds(670, 170, 120, 50);
-		divisas2.setFont(new Font("Tahoma", Font.BOLD, 20));
+		divisas2.setFont(new Font("Agency FB", Font.BOLD, 25));
 		divisas2.setSelectedIndex(-1);
 		bloqueContenedor3.add(divisas2);
 
 		botonConvertir = new JButton("Convertir");
 		botonConvertir.setBounds(350, 350, 200, 80);
-		botonConvertir.setFont(new Font("Tahoma", Font.BOLD, 20));
+		botonConvertir.setFont(new Font("Agency FB", Font.BOLD, 30));
 		bloqueContenedor3.add(botonConvertir);
 
 		botonSalir2 = new JButton("");
 		botonSalir2.setBounds(795, 470, 70, 70);
-		botonSalir2.setFont(new Font("Tahoma", Font.BOLD, 20));
+		botonSalir2.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor3.add(botonSalir2);
 		botonSalir2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/casa.png")));
 
 		botonAtras1 = new JButton("");
 		botonAtras1.setBounds(25, 470, 70, 70);
-		botonAtras1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		botonAtras1.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor3.add(botonAtras1);
 		botonAtras1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png")));
 
@@ -201,30 +199,30 @@ public class ClaseVista extends javax.swing.JFrame {
 		setSize(910, 600);
 		setLocationRelativeTo(null);
 
-		botonNumero4 = new JButton("PROGRAMA 1");
+		botonNumero4 = new JButton("CONVERSOR");
 		botonNumero4.setBounds(60, 70, 200, 50);
-		botonNumero4.setFont(new Font("Fipps", Font.ITALIC, 15));
+		botonNumero4.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor2.add(botonNumero4);
 
-		botonNumero5 = new JButton("PROGRAMA 2");
+		botonNumero5 = new JButton("QUIZ");
 		botonNumero5.setBounds(60, 240, 200, 50);
-		botonNumero5.setFont(new Font("Fipps", Font.ITALIC, 15));
+		botonNumero5.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor2.add(botonNumero5);
 
-		botonNumero6 = new JButton("PROGRAMA 3");
+		botonNumero6 = new JButton("ECUACIONES");
 		botonNumero6.setBounds(60, 400, 200, 50);
-		botonNumero6.setFont(new Font("Fipps", Font.ITALIC, 15));
+		botonNumero6.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor2.add(botonNumero6);
 
 		botonSalir1 = new JButton("");
 		botonSalir1.setBounds(795, 470, 70, 70);
-		botonSalir1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		botonSalir1.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor2.add(botonSalir1);
 		botonSalir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/casa.png")));
 
 		//Comando para poner una imagen de fondo
 		((JPanel) getContentPane()).setOpaque(false);
-		ImageIcon uno = new ImageIcon(this.getClass().getResource("/imagenes/fondo2.png"));
+		ImageIcon uno = new ImageIcon(this.getClass().getResource("/imagenes/fondo2.jpg"));
 		JLabel fondo = new JLabel();
 		fondo.setIcon(uno);
 		getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
@@ -247,28 +245,28 @@ public class ClaseVista extends javax.swing.JFrame {
 
 		botonNumero7 = new JButton("HISTORIA");
 		botonNumero7.setBounds(50, 350, 200, 50);
-		botonNumero7.setFont(new Font("Fipps", Font.ITALIC, 15));
+		botonNumero7.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor4.add(botonNumero7);
 
 		botonNumero8 = new JButton("DEPORTES");
 		botonNumero8.setBounds(356, 350, 200, 50);
-		botonNumero8.setFont(new Font("Fipps", Font.ITALIC, 15));
+		botonNumero8.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor4.add(botonNumero8);
 
 		botonNumero9 = new JButton("MUSICA");
 		botonNumero9.setBounds(650, 350, 200, 50);
-		botonNumero9.setFont(new Font("Fipps", Font.ITALIC, 15));
+		botonNumero9.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor4.add(botonNumero9);
 
 		botonSalir3 = new JButton("");
 		botonSalir3.setBounds(795, 470, 70, 70);
-		botonSalir3.setFont(new Font("Tahoma", Font.BOLD, 20));
+		botonSalir3.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor4.add(botonSalir3);
 		botonSalir3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/casa.png")));
 
 		botonAtras2 = new JButton("");
 		botonAtras2.setBounds(25, 470, 70, 70);
-		botonAtras2.setFont(new Font("Tahoma", Font.BOLD, 20));
+		botonAtras2.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor4.add(botonAtras2);
 		botonAtras2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png")));
 
@@ -296,7 +294,7 @@ public class ClaseVista extends javax.swing.JFrame {
 		//Area de texto con la ecuacion a resolver
 		cajaDeTextoNumero2 = new JTextField("", 10);
 		cajaDeTextoNumero2.setBounds(340, 100, 230, 60);
-		cajaDeTextoNumero2.setFont(new Font("Tahoma", Font.BOLD, 25));
+		cajaDeTextoNumero2.setFont(new Font("Agency FB", Font.BOLD, 25));
 		cajaDeTextoNumero2.setHorizontalAlignment(JTextField.CENTER);
 		cajaDeTextoNumero2.setEditable(false);
 		bloqueContenedor5.add(cajaDeTextoNumero2);
@@ -304,7 +302,7 @@ public class ClaseVista extends javax.swing.JFrame {
 		//Area de texto para introducir el numero
 		cajaDeTextoNumero3 = new JTextField("", 10);
 		cajaDeTextoNumero3.setBounds(350, 300, 200, 50);
-		cajaDeTextoNumero3.setFont(new Font("Tahoma", Font.BOLD, 25));
+		cajaDeTextoNumero3.setFont(new Font("Agency FB", Font.BOLD, 25));
 		cajaDeTextoNumero3.setHorizontalAlignment(JTextField.CENTER);
 		bloqueContenedor5.add(cajaDeTextoNumero3);
 
@@ -312,7 +310,7 @@ public class ClaseVista extends javax.swing.JFrame {
 		//Boton de emprezar
 		botonNumero10 = new JButton("COMPROBAR");
 		botonNumero10.setBounds(350, 400, 200, 50);
-		botonNumero10.setFont(new Font("Fipps", Font.ITALIC, 15));
+		botonNumero10.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor5.add(botonNumero10);
 
 		
@@ -320,14 +318,14 @@ public class ClaseVista extends javax.swing.JFrame {
 		//Boton inicio con icono de casa
 		botonSalir4 = new JButton("");
 		botonSalir4.setBounds(795, 470, 70, 70);
-		botonSalir4.setFont(new Font("Tahoma", Font.BOLD, 20));
+		botonSalir4.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor5.add(botonSalir4);
 		botonSalir4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/casa.png")));
 
 		//Boton flecha ventana anterior
 		botonAtras3 = new JButton("");
 		botonAtras3.setBounds(25, 470, 70, 70);
-		botonAtras3.setFont(new Font("Tahoma", Font.BOLD, 20));
+		botonAtras3.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor5.add(botonAtras3);
 		botonAtras3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png")));
 
