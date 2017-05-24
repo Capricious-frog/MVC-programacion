@@ -4,7 +4,6 @@ import java.awt.Container;
 import java.awt.FlowLayout;
 import javax.swing.*;
 import java.awt.Font;
-import java.util.concurrent.TimeUnit;
 
 public class ClaseVista extends javax.swing.JFrame {
 
@@ -60,11 +59,11 @@ public class ClaseVista extends javax.swing.JFrame {
 	//Boton programa juego memoria
 	JButton botonSalir4 = null;
 	//Boton flecha atras conversor
-	JButton botonAtras2 = null;
+	JButton botonAtras1 = null;
 	//Boton flecha atras quiz
-	JButton botonAtras3 = null;
+	JButton botonAtras2 = null;
 	//Boton flecha atras juego memoria
-	JButton botonAtras4 = null;
+	JButton botonAtras3 = null;
 	//Boton "Convertir" en el conversor
 	JButton botonConvertir = null;
 
@@ -157,11 +156,11 @@ public class ClaseVista extends javax.swing.JFrame {
 		bloqueContenedor3.add(botonSalir2);
 		botonSalir2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/casa.png")));
 
-		botonAtras2 = new JButton("");
-		botonAtras2.setBounds(25, 470, 70, 70);
-		botonAtras2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		bloqueContenedor3.add(botonAtras2);
-		botonAtras2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png")));
+		botonAtras1 = new JButton("");
+		botonAtras1.setBounds(25, 470, 70, 70);
+		botonAtras1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		bloqueContenedor3.add(botonAtras1);
+		botonAtras1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png")));
 
 		//Comando para poner una imagen de fondo
 		((JPanel) getContentPane()).setOpaque(false);
@@ -251,11 +250,11 @@ public class ClaseVista extends javax.swing.JFrame {
 		bloqueContenedor4.add(botonSalir3);
 		botonSalir3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/casa.png")));
 
-		botonAtras3 = new JButton("");
-		botonAtras3.setBounds(25, 470, 70, 70);
-		botonAtras3.setFont(new Font("Tahoma", Font.BOLD, 20));
-		bloqueContenedor4.add(botonAtras3);
-		botonAtras3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png")));
+		botonAtras2 = new JButton("");
+		botonAtras2.setBounds(25, 470, 70, 70);
+		botonAtras2.setFont(new Font("Tahoma", Font.BOLD, 20));
+		bloqueContenedor4.add(botonAtras2);
+		botonAtras2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png")));
 
 		//Comando para poner una imagen de fondo
 		((JPanel) getContentPane()).setOpaque(false);
@@ -310,16 +309,16 @@ public class ClaseVista extends javax.swing.JFrame {
 		botonSalir4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/casa.png")));
 
 		//Boton flecha ventana anterior
-		botonAtras4 = new JButton("");
-		botonAtras4.setBounds(25, 470, 70, 70);
-		botonAtras4.setFont(new Font("Tahoma", Font.BOLD, 20));
-		bloqueContenedor5.add(botonAtras4);
-		botonAtras4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png")));
+		botonAtras3 = new JButton("");
+		botonAtras3.setBounds(25, 470, 70, 70);
+		botonAtras3.setFont(new Font("Tahoma", Font.BOLD, 20));
+		bloqueContenedor5.add(botonAtras3);
+		botonAtras3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png")));
 
 
 		//Comando para poner una imagen de fondo
 		((JPanel) getContentPane()).setOpaque(false);
-		ImageIcon uno = new ImageIcon(this.getClass().getResource("/Imagenes/memoria.jpg"));
+		ImageIcon uno = new ImageIcon(this.getClass().getResource("/Imagenes/memoria.png"));
 		JLabel fondo = new JLabel();
 		fondo.setIcon(uno);
 		getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);

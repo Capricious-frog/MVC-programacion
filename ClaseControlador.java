@@ -33,62 +33,22 @@ public class ClaseControlador extends Thread implements ActionListener {
 
 	//Son las instrucciones de los botones
 	public void actionPerformed(ActionEvent objEvento) {
-		int numIntroducido, rnd1, rnd2;
+		int rnd1, rnd2;
 		final int numMax = 50, numMin = -50;
 
 		if (objEvento.getSource() == objVista.botonNumero1) {
 			objVista.setVisible(false);
 			objVista2.setVisible(true);
-		} else if (objEvento.getSource() == objVista.botonNumero3) {
-			System.exit(0);
 		} else if (objEvento.getSource() == objVista.botonNumero2) {
 			JOptionPane.showMessageDialog(null, "Este es un programa echo por los integrantes del grupo 3 de 1dm3.");
+		} else if (objEvento.getSource() == objVista.botonNumero3) {
+			System.exit(0);
 		} else if (objEvento.getSource() == objVista2.botonNumero4) {
 			objVista2.setVisible(false);
 			objVista3.setVisible(true);
-		} else if (objEvento.getSource() == objVista2.botonSalir1) {
-			objVista2.setVisible(false);
-			objVista.setVisible(true);
 		} else if (objEvento.getSource() == objVista2.botonNumero5) {
 			objVista2.setVisible(false);
 			objVista4.setVisible(true);
-		} else if (objEvento.getSource() == objVista3.botonSalir2) {
-			objVista3.setVisible(false);
-			objVista.setVisible(true);
-		} else if (objEvento.getSource() == objVista5.botonSalir4) {
-			//Juego memoria salir
-			objVista5.setVisible(false);
-			objVista.setVisible(true);
-		} else if (objEvento.getSource() == objVista3.botonAtras2) {
-			objVista3.setVisible(false);
-			objVista2.setVisible(true);
-		} else if (objEvento.getSource() == objVista5.botonAtras4) {
-			//Juego memoria fecha atras
-			objVista5.setVisible(false);
-			objVista2.setVisible(true);
-		} else if (objEvento.getSource() == objVista3.botonConvertir) {
-
-			Object moneda1 = this.objVista3.divisas.getSelectedItem();
-			String dinero = this.objVista3.cajaDeTextoNumero1.getText();
-			Object moneda2 = this.objVista3.divisas2.getSelectedItem();
-
-			try {
-				sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Musica/sound.wav"));
-				sonido.play();
-
-				objModelo.conversor(moneda1, dinero, moneda2);
-			} catch (NumberFormatException e) {
-				JOptionPane.showMessageDialog(null, "No se pueden introducir letras.");
-
-			} catch (NullPointerException e) {
-				JOptionPane.showMessageDialog(null, "Tienes que elegir una moneda.");
-			}
-		} else if (objEvento.getSource() == objVista4.botonSalir3) {
-			objVista4.setVisible(false);
-			objVista.setVisible(true);
-		} else if (objEvento.getSource() == objVista4.botonAtras3) {
-			objVista4.setVisible(false);
-			objVista2.setVisible(true);
 		} else if (objEvento.getSource() == objVista2.botonNumero6) {
 			objVista2.setVisible(false);
 			objVista5.setVisible(true);
@@ -134,7 +94,47 @@ public class ClaseControlador extends Thread implements ActionListener {
 			break;
 			}
 			
-		}
+		}else if (objEvento.getSource() == objVista2.botonSalir1) {
+			objVista2.setVisible(false);
+			objVista.setVisible(true);
+		} else if (objEvento.getSource() == objVista3.botonSalir2) {
+			objVista3.setVisible(false);
+			objVista.setVisible(true);
+		} else if (objEvento.getSource() == objVista4.botonSalir3) {
+			objVista4.setVisible(false);
+			objVista.setVisible(true);
+		}else if (objEvento.getSource() == objVista5.botonSalir4) {
+			//Juego resolver ecuaciones
+			objVista5.setVisible(false);
+			objVista.setVisible(true);
+		}  else if (objEvento.getSource() == objVista3.botonAtras1){
+			objVista3.setVisible(false);
+			objVista2.setVisible(true);
+		}else if (objEvento.getSource() == objVista4.botonAtras2) {
+			objVista4.setVisible(false);
+			objVista2.setVisible(true);
+		} else if (objEvento.getSource() == objVista5.botonAtras3) {
+			//Juego ecauciones fecha atras
+			objVista5.setVisible(false);
+			objVista2.setVisible(true);
+		} else if (objEvento.getSource() == objVista3.botonConvertir) {
+
+			Object moneda1 = this.objVista3.divisas.getSelectedItem();
+			String dinero = this.objVista3.cajaDeTextoNumero1.getText();
+			Object moneda2 = this.objVista3.divisas2.getSelectedItem();
+
+			try {
+				sonido = java.applet.Applet.newAudioClip(getClass().getResource("/Musica/sound.wav"));
+				sonido.play();
+
+				objModelo.conversor(moneda1, dinero, moneda2);
+			} catch (NumberFormatException e) {
+				JOptionPane.showMessageDialog(null, "No se pueden introducir letras.");
+
+			} catch (NullPointerException e) {
+				JOptionPane.showMessageDialog(null, "Tienes que elegir una moneda.");
+			}
+		} 
 	}
 
 	public void actionListener(ActionListener escuchador) {
@@ -156,9 +156,9 @@ public class ClaseControlador extends Thread implements ActionListener {
 
 		objVista3.botonConvertir.addActionListener(escuchador);
 
-		objVista3.botonAtras2.addActionListener(escuchador);
-		objVista4.botonAtras3.addActionListener(escuchador);
-		objVista5.botonAtras4.addActionListener(escuchador);
+		objVista3.botonAtras1.addActionListener(escuchador);
+		objVista4.botonAtras2.addActionListener(escuchador);
+		objVista5.botonAtras3.addActionListener(escuchador);
 
 		objVista5.cajaDeTextoNumero3.addActionListener(escuchador);
 	}
