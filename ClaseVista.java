@@ -1,3 +1,5 @@
+package proyecto;
+
 import java.awt.Container;
 import java.awt.FlowLayout;
 import javax.swing.*;
@@ -48,37 +50,31 @@ public class ClaseVista extends javax.swing.JFrame {
 	
 	
 	
-	Container bloqueContenedor = null;
-	Container bloqueContenedor2 = null;
-	Container bloqueContenedor3 = null;
-	Container bloqueContenedor4 = null;
-	Container bloqueContenedor5 = null;
+	Container bloqueContenedor, bloqueContenedor2, bloqueContenedor3, bloqueContenedor4, bloqueContenedor5;
 	
-	JTextField cajaDeTextoNumero1 = null;
-	public static JTextField cajaDeTextoNumero2 = null;
-	JTextField cajaDeTextoNumero3 = null;
+	public static JTextField cajaDeTextoNumero1, cajaDeTextoNumero2, cajaDeTextoNumero3;
 	
-	JButton botonNumero1 = null;
-	JButton botonNumero2 = null;
-	JButton botonNumero3 = null;
-	JButton botonNumero4 = null;
-	JButton botonNumero5 = null;
-	JButton botonNumero6 = null;
-	JButton botonNumero7 = null;
-	JButton botonNumero8 = null;
-	JButton botonNumero9 = null;
-	JButton botonNumero10 = null;
-	JButton botonNumero11 = null;
+	JButton botonNumero1;
+	JButton botonNumero2;
+	JButton botonNumero3;
+	JButton botonNumero4;
+	JButton botonNumero5;
+	JButton botonNumero6;
+	JButton botonNumero7;
+	JButton botonNumero8;
+	JButton botonNumero9;
+	JButton botonNumero10;
+	JButton botonNumero11;
 	
-	JButton botonSalir1 = null;
-	JButton botonSalir2 = null;
-	JButton botonSalir3 = null;
-	JButton botonSalir4 = null;
+	JButton botonSalir1;
+	JButton botonSalir2;
+	JButton botonSalir3;
+	JButton botonSalir4;
 	
-	JButton botonAtras1 = null;
-	JButton botonAtras2 = null;
-	JButton botonAtras3 = null;
-	JButton botonConvertir = null;
+	JButton botonAtras1;
+	JButton botonAtras2;
+	JButton botonAtras3;
+	JButton botonConvertir;
 
 	//Array con las diferentes opciones de conversion
 	String[] arrayDivisas = {
@@ -89,8 +85,8 @@ public class ClaseVista extends javax.swing.JFrame {
 			"Pesos - $"
 	};
 
-	JComboBox<Object> divisas = null, divisas2 = null;
-	JFrame frame = null;
+	JComboBox<Object> divisas, divisas2;
+	JFrame frame = new JFrame();
 
 	//Ventana principal
 	public ClaseVista() {
@@ -117,15 +113,17 @@ public class ClaseVista extends javax.swing.JFrame {
 		botonNumero3.setBounds(350, 430, 200, 50);
 		botonNumero3.setFont(new Font("Agency FB", Font.BOLD, 25));
 		bloqueContenedor.add(botonNumero3);
+		
 
 		//Comando para poner una imagen de fondo
-		((JPanel) getContentPane()).setOpaque(false);
-		ImageIcon uno = new ImageIcon(this.getClass().getResource("/imagenes/fondo.gif"));
-		JLabel fondo = new JLabel();
+		
+		((JPanel) bloqueContenedor).setOpaque(false);
+		ImageIcon uno = new ImageIcon(this.getClass().getResource("/Imagenes/fondo.gif"));
+		JLabel fondo = new JLabel(uno);
 		fondo.setIcon(uno);
 		getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
 		fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
-
+		
 		setVisible(true);
 
 	}
@@ -177,13 +175,14 @@ public class ClaseVista extends javax.swing.JFrame {
 		botonAtras1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png")));
 
 		//Comando para poner una imagen de fondo
+		
 		((JPanel) getContentPane()).setOpaque(false);
-		ImageIcon uno = new ImageIcon(this.getClass().getResource("/imagenes/fondo_dinero.jpg"));
+		ImageIcon uno = new ImageIcon(this.getClass().getResource("/Imagenes/fondo_dinero.jpg"));
 		JLabel fondo = new JLabel();
 		fondo.setIcon(uno);
 		getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
 		fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
-
+		
 
 		setVisible(false);
 	}
@@ -221,13 +220,14 @@ public class ClaseVista extends javax.swing.JFrame {
 		botonSalir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/casa.png")));
 
 		//Comando para poner una imagen de fondo
+		
 		((JPanel) getContentPane()).setOpaque(false);
-		ImageIcon uno = new ImageIcon(this.getClass().getResource("/imagenes/fondo2.jpg"));
+		ImageIcon uno = new ImageIcon(this.getClass().getResource("/Imagenes/fondo2.png"));
 		JLabel fondo = new JLabel();
 		fondo.setIcon(uno);
 		getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
 		fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
-
+		
 		setVisible(false);
 
 	}
@@ -271,13 +271,14 @@ public class ClaseVista extends javax.swing.JFrame {
 		botonAtras2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/back.png")));
 
 		//Comando para poner una imagen de fondo
+		
 		((JPanel) getContentPane()).setOpaque(false);
-		ImageIcon uno = new ImageIcon(this.getClass().getResource("/imagenes/fondo_deportes.png"));
+		ImageIcon uno = new ImageIcon(this.getClass().getResource("/Imagenes/fondo_deportes.png"));
 		JLabel fondo = new JLabel();
 		fondo.setIcon(uno);
 		getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
 		fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
-
+		 
 		setVisible(false);
 	}
 
@@ -331,12 +332,15 @@ public class ClaseVista extends javax.swing.JFrame {
 
 
 		//Comando para poner una imagen de fondo
+		
 		((JPanel) getContentPane()).setOpaque(false);
 		ImageIcon uno = new ImageIcon(this.getClass().getResource("/Imagenes/memoria.png"));
 		JLabel fondo = new JLabel();
 		fondo.setIcon(uno);
 		getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
 		fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
+		
+		
 		setVisible(false);
 	}
 

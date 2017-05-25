@@ -1,6 +1,11 @@
+package proyecto;
+
+import javax.swing.JOptionPane;
+
 public class ClasePrincipal {
 
 	public static void main(String args[]) {
+		try {
 		ClaseModelo modelo = new ClaseModelo();
 
 		//Ventana principal
@@ -13,9 +18,14 @@ public class ClasePrincipal {
 		ClaseVista vista4 = new ClaseVista("a");
 		//Ventana programa 3 (Juego memoria)
 		ClaseVista vista5 = new ClaseVista((float)1.1);
-
+		
 
 		new ClaseControlador(vista, modelo, vista2, vista3, vista4, vista5);
-
+		
+		} catch (Throwable t) {
+			JOptionPane.showMessageDialog(
+					null, t.getClass().getSimpleName() + ": " + t.getMessage());
+			throw t; // don't suppress Throwable
+		}
 	}
 }

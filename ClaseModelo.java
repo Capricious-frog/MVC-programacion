@@ -1,3 +1,5 @@
+package proyecto;
+
 import javax.swing.*;
 import java.awt.Font;
 import javax.swing.plaf.*;
