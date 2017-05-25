@@ -52,7 +52,11 @@ public class ClaseVista extends javax.swing.JFrame {
 	
 	Container bloqueContenedor, bloqueContenedor2, bloqueContenedor3, bloqueContenedor4, bloqueContenedor5;
 	
-	public static JTextField cajaDeTextoNumero1, cajaDeTextoNumero2, cajaDeTextoNumero3;
+	public JTextField cajaDeTextoNumero1;
+
+	public static JTextField cajaDeTextoNumero2;
+
+	public JTextField cajaDeTextoNumero3;
 	
 	JButton botonNumero1;
 	JButton botonNumero2;
