@@ -226,7 +226,7 @@ public class ClaseVista extends javax.swing.JFrame {
 		//Comando para poner una imagen de fondo
 		
 		((JPanel) getContentPane()).setOpaque(false);
-		ImageIcon uno = new ImageIcon(this.getClass().getResource("/Imagenes/fondo2.png"));
+		ImageIcon uno = new ImageIcon(this.getClass().getResource("/Imagenes/fondo2.jpg"));
 		JLabel fondo = new JLabel();
 		fondo.setIcon(uno);
 		getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
