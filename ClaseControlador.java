@@ -75,20 +75,20 @@ public class ClaseControlador extends Thread implements ActionListener {
 			rnd1 = (int) ((numMax-numMin+1)*Math.random()+numMin);
 			rnd2 = (int) ((numMax-numMin+1)*Math.random()+numMin);
 
-			switch ((int) ((numMax-numMin+1)*Math.random()+numMin)){
+			switch ((int) ((4-1+1)*Math.random()+1)){
 			case 1: ClaseVista.ponerTexto(rnd1+"+"+rnd2); 
 			res = rnd1+rnd2;
 			break;
-			case 2: ClaseVista.ponerTexto(rnd1+"-"+rnd2);
+			case 2: ClaseVista.ponerTexto(rnd1+" - "+rnd2);
 			res = rnd1-rnd2;
 			break;
-			case 3: ClaseVista.ponerTexto(rnd1+"*"+rnd2);
+			case 3: ClaseVista.ponerTexto(rnd1+" * "+rnd2);
 			res = rnd1*rnd2;
 			break;
-			case 4: ClaseVista.ponerTexto(rnd1+"/"+rnd2);
+			case 4: ClaseVista.ponerTexto(rnd1+" / "+rnd2);
 			res = rnd1/rnd2;
 			break;
-			default: ClaseVista.ponerTexto(rnd1+"+"+rnd2);
+			default: ClaseVista.ponerTexto(rnd1+" + "+rnd2);
 			res = rnd1+rnd2;
 			break;
 			}
